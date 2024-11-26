@@ -11,20 +11,7 @@
             <div class="container-fluid">
                 <div class="sticky-header">
                     <header>
-                        <nav class="navbar navbar-b navbar-dark navbar-trans navbar-expand-xl fixed-top nav-padding" id="sidebar-menu"><a class="navbar-brand p-0" href="#"><img class="img-fluid" src="../assets/images/landing/landing_logo.png" alt=""></a>
-                            <button class="navbar-toggler navabr_btn-set custom_nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-                            <div class="navbar-collapse justify-content-center collapse hidenav" id="navbarDefault">
-                                <ul class="navbar-nav navbar_nav_modify" id="scroll-spy">
-                                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                                    <li class="nav-item"> <a class="nav-link" id="page" href="#demo">Page</a></li>
-                                    <li class="nav-item"><a class="nav-link" id="Feature" href="#framework">Feature</a></li>
-                                    <li class="nav-item"><a class="nav-link" id="Portfolio" href="https://themeforest.net/user/pixelstrap/portfolio" target="_blank">Portfolio</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSe6hKUXw_By-pg7yabL0FxoTM02ZPTxoXy8PE3yboRuUCuyeA/viewform" target="_blank">Hire Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" id="documentation" href="https://docs.pixelstrap.net/admin/riho/document/" target="_blank">Documentation</a></li>
-                                </ul>
-                            </div>
-                            <div class="buy-btn"><a class="nav-link js-scroll" href="https://themeforest.net/user/pixelstrap/portfolio" target="_blank">Buy Now</a></div>
-                        </nav>
+                        @include('components.front-menu')
                     </header>
                 </div>
                 <div class="row justify-content-center">
@@ -431,7 +418,6 @@
                                 <li><i class="fa fa-star font-warning">   </i></li>
                                 <li> <i class="fa fa-star font-warning"> </i></li>
                             </ul>
-                            <div class="btn-footer"> <a class="btn btn-lg btn-primary" target="_blank" href="index.html" data-bs-original-title="" title="">Check Now</a><a class="btn btn-lg btn-secondary" target="_blank" href=" https://themeforest.net/user/pixelstrap/portfolio" data-bs-original-title="" title="">Buy Now</a><a class="btn btn-lg btn-success" target="_blank" href="https://themeforest.net/user/pixelstrap/portfolio" data-bs-original-title="" title="">Rate Us</a></div>
                         </div>
                     </div>
                 </div>

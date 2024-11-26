@@ -75,7 +75,7 @@
     $("html, body").animate(
       {
         scrollTop: 0,
-      }, 
+      },
       600
     );
     return false;
@@ -83,19 +83,6 @@
 
 })(jQuery);
 
-// var navbar = document.getElementById("scroll-spy");
-
-// // Get all buttons with class="btn" inside the container
-// var btns = navbar.getElementsByClassName("btn");
-
-// // Loop through the buttons and add the active class to the current/clicked button
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function() {
-//     var current = document.getElementsByClassName("navbar-nav navbar_nav_modify active");
-//     current[0].className = current[0].className.replace(" active", "");
-//     this.className += " active";
-//   });
-// }
 var btnContainer = document.getElementById("home");
 
 // Get all buttons with class="btn" inside the container
