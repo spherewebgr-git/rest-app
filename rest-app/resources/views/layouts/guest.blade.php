@@ -1,30 +1,52 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant Index Page">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
+    <title>New Restaurant in town</title>
+    <!-- Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/icofont.css')}}">
+    <link rel="icon" href="{{asset('assets/svg/landing-icons.svg')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/slick-theme.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/animate.css')}}">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/bootstrap.css')}}">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
+</head>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<body>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+@yield('content')
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
-
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
-            </div>
-        </div>
-    </body>
+<!-- latest jquery-->
+<script src="{{asset('assets/js/jquery-3.6.0.min.js')}}"></script>
+<script src="{{asset('assets/js/stats.min.js')}}"> </script>
+<!-- Bootstrap js-->
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<!-- feather icon js-->
+<script src="{{asset('assets/js/feather.min.js')}}"></script>
+<script src="{{asset('assets/js/feather-icon.js')}}"></script>
+<!-- Plugins JS start-->
+<script src="{{asset('assets/js/tooltip-init.js')}}"></script>
+<script src="{{asset('assets/js/animation/wow.min.js')}}"></script>
+<script src="{{asset('assets/js/landing_sticky.js')}}"></script>
+<script src="{{asset('assets/js/landing.js')}}"></script>
+<script src="{{asset('assets/js/slick/slick.min.js')}}"></script>
+<script src="{{asset('assets/js/slick/slick.js')}}"></script>
+<script src="{{asset('assets/js/landing-slick.js')}}"></script>
+<script src="{{asset('assets/js/header-slick.js')}}"></script>
+</body>
 </html>

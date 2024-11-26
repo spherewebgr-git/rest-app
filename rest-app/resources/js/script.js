@@ -1,387 +1,369 @@
-/*! -----------------------------------------------------------------------------------
 
-    Template Name: Riho Admin
-    Template URI: https://admin.pixelstrap.net/riho/template/
-    Description: This is Admin theme
-    Author: Pixelstrap
-    Author URI: https://themeforest.net/user/pixelstrap
+ jQuery(document).ready(function (){
+     jQuery(document).on("click", function (e) {
+         var outside_space = jQuery(".outside");
+         if (
+             !outside_space.is(e.target) &&
+             outside_space.has(e.target).length === 0
+         ) {
+             jQuery(".menu-to-be-close").removeClass("d-block");
+             jQuery(".menu-to-be-close").css("display", "none");
+         }
+     });
 
------------------------------------------------------------------------------------
+     jQuery(".prooduct-details-box .close").on("click", function (e) {
+         var tets = jQuery(this).parent().parent().parent().parent().addClass("d-none");
+         console.log(tets);
+     });
 
-        01. password show hide
-        02. Background Image js
-        03. sidebar filter
-        04. Language js
-        05. Translate js
+     if (jQuery(".page-wrapper").hasClass("horizontal-wrapper")) {
+         jQuery(".sidebar-list").hover(
+             function () {
+                 jQuery(this).addClass("hoverd");
+             },
+             function () {
+                 jQuery(this).removeClass("hoverd");
+             }
+         );
+         jQuery(window).on("scroll", function () {
+             if (jQuery(this).scrollTop() < 600) {
+                 jQuery(".sidebar-list").removeClass("hoverd");
+             }
+         });
+     }
 
- --------------------------------------------------------------------------------- */
+     /*----------------------------------------
+        password show hide
+        ----------------------------------------*/
+     jQuery(".show-hide").show();
+     jQuery(".show-hide span").addClass("show");
 
-(function ($) {
-  "use strict";
-  $(document).on("click", function (e) {
-    var outside_space = $(".outside");
-    if (
-      !outside_space.is(e.target) &&
-      outside_space.has(e.target).length === 0
-    ) {
-      $(".menu-to-be-close").removeClass("d-block");
-      $(".menu-to-be-close").css("display", "none");
-    }
-  });
+     jQuery(".show-hide span").click(function () {
+         if (jQuery(this).hasClass("show")) {
+             jQuery('input[name="login[password]"]').attr("type", "text");
+             jQuery(this).removeClass("show");
+         } else {
+             jQuery('input[name="login[password]"]').attr("type", "password");
+             jQuery(this).addClass("show");
+         }
+     });
+     jQuery('form button[type="submit"]').on("click", function () {
+         jQuery(".show-hide span").addClass("show");
+         jQuery(".show-hide")
+             .parent()
+             .find('input[name="login[password]"]')
+             .attr("type", "password");
+     });
 
-  $(".prooduct-details-box .close").on("click", function (e) {
-    var tets = $(this).parent().parent().parent().parent().addClass("d-none");
-    console.log(tets);
-  });
+     /*=====================
+         02. Background Image js
+         ==========================*/
+     jQuery(".bg-center").parent().addClass("b-center");
+     jQuery(".bg-img-cover").parent().addClass("bg-size");
+     jQuery(".bg-img-cover").each(function () {
+         var el = jQuery(this),
+             src = el.attr("src"),
+             parent = el.parent();
+         parent.css({
+             "background-image": "url(" + src + ")",
+             "background-size": "cover",
+             "background-position": "center",
+             display: "block",
+         });
+         el.hide();
+     });
 
-  if ($(".page-wrapper").hasClass("horizontal-wrapper")) {
-    $(".sidebar-list").hover(
-      function () {
-        $(this).addClass("hoverd");
-      },
-      function () {
-        $(this).removeClass("hoverd");
-      }
-    );
-    $(window).on("scroll", function () {
-      if ($(this).scrollTop() < 600) {
-        $(".sidebar-list").removeClass("hoverd");
-      }
-    });
-  }
+     jQuery(".mega-menu-container").css("display", "none");
+     jQuery(".header-search").click(function () {
+         jQuery(".search-full").addClass("open");
+     });
+     jQuery(".close-search").click(function () {
+         jQuery(".search-full").removeClass("open");
+         jQuery("body").removeClass("offcanvas");
+     });
+     jQuery(".mobile-toggle").click(function () {
+         jQuery(".nav-menus").toggleClass("open");
+     });
+     jQuery(".mobile-toggle-left").click(function () {
+         jQuery(".left-header").toggleClass("open");
+     });
+     jQuery(".bookmark-search").click(function () {
+         jQuery(".form-control-search").toggleClass("open");
+     });
+     jQuery(".filter-toggle").click(function () {
+         jQuery(".product-sidebar").toggleClass("open");
+     });
+     jQuery(".toggle-data").click(function () {
+         jQuery(".product-wrapper").toggleClass("sidebaron");
+     });
+     jQuery(".form-control-search input").keyup(function (e) {
+         if (e.target.value) {
+             jQuery(".page-wrapper").addClass("offcanvas-bookmark");
+         } else {
+             jQuery(".page-wrapper").removeClass("offcanvas-bookmark");
+         }
+     });
+     jQuery(".search-full input").keyup(function (e) {
+         console.log(e.target.value);
+         if (e.target.value) {
+             jQuery("body").addClass("offcanvas");
+         } else {
+             jQuery("body").removeClass("offcanvas");
+         }
+     });
 
-  /*----------------------------------------
-     password show hide
-     ----------------------------------------*/
-  $(".show-hide").show();
-  $(".show-hide span").addClass("show");
+     jQuery("body").keydown(function (e) {
+         if (e.keyCode === 27) {
+             jQuery(".search-full input").val("");
+             jQuery(".form-control-search input").val("");
+             jQuery(".page-wrapper").removeClass("offcanvas-bookmark");
+             jQuery(".search-full").removeClass("open");
+             jQuery(".search-form .form-control-search").removeClass("open");
+             jQuery("body").removeClass("offcanvas");
+         }
+     });
+     jQuery(".mode").on("click", function () {
+         const bodyModeDark = jQuery("body").hasClass("dark-only");
 
-  $(".show-hide span").click(function () {
-    if ($(this).hasClass("show")) {
-      $('input[name="login[password]"]').attr("type", "text");
-      $(this).removeClass("show");
-    } else {
-      $('input[name="login[password]"]').attr("type", "password");
-      $(this).addClass("show");
-    }
-  });
-  $('form button[type="submit"]').on("click", function () {
-    $(".show-hide span").addClass("show");
-    $(".show-hide")
-      .parent()
-      .find('input[name="login[password]"]')
-      .attr("type", "password");
-  });
+         if (!bodyModeDark) {
+             jQuery(".mode").addClass("active");
+             localStorage.setItem("mode", "dark-only");
+             jQuery("body").addClass("dark-only");
+             jQuery("body").removeClass("light");
+         }
+         if (bodyModeDark) {
+             jQuery(".mode").removeClass("active");
+             localStorage.setItem("mode", "light");
+             jQuery("body").removeClass("dark-only");
+             jQuery("body").addClass("light");
+         }
+     });
+     // jQuery("body").addClass(
+     //   localStorage.getItem("mode")
+     //     ? localStorage.getItem("mode")
+     //     : "light"
+     // );
+     jQuery(".mode").addClass(
+         localStorage.getItem("mode") === "dark-only" ? "active" : " "
+     );
 
-  /*=====================
-      02. Background Image js
-      ==========================*/
-  $(".bg-center").parent().addClass("b-center");
-  $(".bg-img-cover").parent().addClass("bg-size");
-  $(".bg-img-cover").each(function () {
-    var el = $(this),
-      src = el.attr("src"),
-      parent = el.parent();
-    parent.css({
-      "background-image": "url(" + src + ")",
-      "background-size": "cover",
-      "background-position": "center",
-      display: "block",
-    });
-    el.hide();
-  });
+     // sidebar filter
+     jQuery(".md-sidebar .md-sidebar-toggle ").on("click", function (e) {
+         jQuery(".md-sidebar .md-sidebar-aside ").toggleClass("open");
+     });
 
-  $(".mega-menu-container").css("display", "none");
-  $(".header-search").click(function () {
-    $(".search-full").addClass("open");
-  });
-  $(".close-search").click(function () {
-    $(".search-full").removeClass("open");
-    $("body").removeClass("offcanvas");
-  });
-  $(".mobile-toggle").click(function () {
-    $(".nav-menus").toggleClass("open");
-  });
-  $(".mobile-toggle-left").click(function () {
-    $(".left-header").toggleClass("open");
-  });
-  $(".bookmark-search").click(function () {
-    $(".form-control-search").toggleClass("open");
-  });
-  $(".filter-toggle").click(function () {
-    $(".product-sidebar").toggleClass("open");
-  });
-  $(".toggle-data").click(function () {
-    $(".product-wrapper").toggleClass("sidebaron");
-  });
-  $(".form-control-search input").keyup(function (e) {
-    if (e.target.value) {
-      $(".page-wrapper").addClass("offcanvas-bookmark");
-    } else {
-      $(".page-wrapper").removeClass("offcanvas-bookmark");
-    }
-  });
-  $(".search-full input").keyup(function (e) {
-    console.log(e.target.value);
-    if (e.target.value) {
-      $("body").addClass("offcanvas");
-    } else {
-      $("body").removeClass("offcanvas");
-    }
-  });
+     jQuery(".loader-wrapper").fadeOut("slow", function () {
+         jQuery(this).remove();
+     });
 
-  $("body").keydown(function (e) {
-    if (e.keyCode == 27) {
-      $(".search-full input").val("");
-      $(".form-control-search input").val("");
-      $(".page-wrapper").removeClass("offcanvas-bookmark");
-      $(".search-full").removeClass("open");
-      $(".search-form .form-control-search").removeClass("open");
-      $("body").removeClass("offcanvas");
-    }
-  });
-  $(".mode").on("click", function () {
-    const bodyModeDark = $("body").hasClass("dark-only");
+     jQuery(window).on("scroll", function () {
+         if (jQuery(this).scrollTop() > 600) {
+             jQuery(".tap-top").fadeIn();
+         } else {
+             jQuery(".tap-top").fadeOut();
+         }
+     });
 
-    if (!bodyModeDark) {
-      $(".mode").addClass("active");
-      localStorage.setItem("mode", "dark-only");
-      $("body").addClass("dark-only");
-      $("body").removeClass("light");
-    }
-    if (bodyModeDark) {
-      $(".mode").removeClass("active");
-      localStorage.setItem("mode", "light");
-      $("body").removeClass("dark-only");
-      $("body").addClass("light");
-    }
-  }); 
-  // $("body").addClass(
-  //   localStorage.getItem("mode")
-  //     ? localStorage.getItem("mode")
-  //     : "light"
-  // ); 
-  $(".mode").addClass(
-    localStorage.getItem("mode") === "dark-only" ? "active" : " "
-  );
+     jQuery(".tap-top").click(function () {
+         jQuery("html, body").animate(
+             {
+                 scrollTop: 0,
+             },
+             600
+         );
+         return false;
+     });
+     (function ($, window, document, undefined) {
+         "use strict";
+         var $ripple = jQuery(".js-ripple");
+         $ripple.on("click.ui.ripple", function (e) {
+             var $this = jQuery(this);
+             var $offset = $this.parent().offset();
+             var $circle = $this.find(".c-ripple__circle");
+             var x = e.pageX - $offset.left;
+             var y = e.pageY - $offset.top;
+             $circle.css({
+                 top: y + "px",
+                 left: x + "px",
+             });
+             $this.addClass("is-active");
+         });
+         $ripple.on(
+             "animationend webkitAnimationEnd oanimationend MSAnimationEnd",
+             function (e) {
+                 jQuery(this).removeClass("is-active");
+             }
+         );
+     })(jQuery, window, document);
 
-  // sidebar filter
-  $(".md-sidebar .md-sidebar-toggle ").on("click", function (e) {
-    $(".md-sidebar .md-sidebar-aside ").toggleClass("open");
-  });
+     // active link
 
-  $(".loader-wrapper").fadeOut("slow", function () {
-    $(this).remove();
-  });
+     jQuery(".chat-menu-icons .toogle-bar").click(function () {
+         jQuery(".chat-menu").toggleClass("show");
+     });
 
-  $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 600) {
-      $(".tap-top").fadeIn();
-    } else {
-      $(".tap-top").fadeOut();
-    }
-  });
+     // Language
+     var tnum = "en";
 
-  $(".tap-top").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      600
-    );
-    return false;
-  });
-  (function ($, window, document, undefined) {
-    "use strict";
-    var $ripple = $(".js-ripple");
-    $ripple.on("click.ui.ripple", function (e) {
-      var $this = $(this);
-      var $offset = $this.parent().offset();
-      var $circle = $this.find(".c-ripple__circle");
-      var x = e.pageX - $offset.left;
-      var y = e.pageY - $offset.top;
-      $circle.css({
-        top: y + "px",
-        left: x + "px",
-      });
-      $this.addClass("is-active");
-    });
-    $ripple.on(
-      "animationend webkitAnimationEnd oanimationend MSAnimationEnd",
-      function (e) {
-        $(this).removeClass("is-active");
-      }
-    );
-  })(jQuery, window, document);
+     jQuery(document).ready(function () {
+         if (localStorage.getItem("primary") != null) {
+             var primary_val = localStorage.getItem("primary");
+             jQuery("#ColorPicker1").val(primary_val);
+             var secondary_val = localStorage.getItem("secondary");
+             jQuery("#ColorPicker2").val(secondary_val);
+         }
 
-  // active link
+         jQuery(document).click(function (e) {
+             jQuery(".translate_wrapper, .more_lang").removeClass("active");
+         });
+         jQuery(".translate_wrapper .current_lang").click(function (e) {
+             e.stopPropagation();
+             jQuery(this).parent().toggleClass("active");
 
-  $(".chat-menu-icons .toogle-bar").click(function () {
-    $(".chat-menu").toggleClass("show");
-  });
+             setTimeout(function () {
+                 jQuery(".more_lang").toggleClass("active");
+             }, 5);
+         });
 
-  // Language
-  var tnum = "en";
+         /*TRANSLATE*/
+         translate(tnum);
 
-  $(document).ready(function () {
-    if (localStorage.getItem("primary") != null) {
-      var primary_val = localStorage.getItem("primary");
-      $("#ColorPicker1").val(primary_val);
-      var secondary_val = localStorage.getItem("secondary");
-      $("#ColorPicker2").val(secondary_val);
-    }
+         jQuery(".more_lang .lang").click(function () {
+             jQuery(this).addClass("selected").siblings().removeClass("selected");
+             jQuery(".more_lang").removeClass("active");
 
-    $(document).click(function (e) {
-      $(".translate_wrapper, .more_lang").removeClass("active");
-    });
-    $(".translate_wrapper .current_lang").click(function (e) {
-      e.stopPropagation();
-      $(this).parent().toggleClass("active");
+             var i = jQuery(this).find("i").attr("class");
+             var lang = jQuery(this).attr("data-value");
+             var tnum = lang;
+             translate(tnum);
 
-      setTimeout(function () {
-        $(".more_lang").toggleClass("active");
-      }, 5);
-    });
+             jQuery(".current_lang .lang-txt").text(lang);
+             jQuery(".current_lang i").attr("class", i);
+         });
+     });
 
-    /*TRANSLATE*/
-    translate(tnum);
+     function translate(tnum) {
+         jQuery(".lan-1").text(trans[0][tnum]);
+         jQuery(".lan-2").text(trans[1][tnum]);
+         jQuery(".lan-3").text(trans[2][tnum]);
+         jQuery(".lan-4").text(trans[3][tnum]);
+         jQuery(".lan-5").text(trans[4][tnum]);
+         jQuery(".lan-6").text(trans[5][tnum]);
+         jQuery(".lan-7").text(trans[6][tnum]);
+         jQuery(".lan-8").text(trans[7][tnum]);
+         jQuery(".lan-9").text(trans[8][tnum]);
+     }
 
-    $(".more_lang .lang").click(function () {
-      $(this).addClass("selected").siblings().removeClass("selected");
-      $(".more_lang").removeClass("active");
+     var trans = [
+         {
+             en: "General",
+             pt: "Geral",
+             es: "Generalo",
+             fr: "GÃ©nÃ©rale",
+             de: "Generel",
+             cn: "ä¸€èˆ¬",
+             ae: "Ø­Ø¬Ù†Ø±Ø§Ù„ Ù„ÙˆØ§Ø¡",
+         },
+         {
+             en: "Dashboards,widgets & layout.",
+             pt: "PainÃ©is, widgets e layout.",
+             es: "Paneloj, fenestraÄµoj kaj aranÄo.",
+             fr: "Tableaux de bord, widgets et mise en page.",
+             de: "Dashboards, widgets en lay-out.",
+             cn: "ä»ªè¡¨æ¿ï¼Œå°å·¥å…·å’Œå¸ƒå±€ã€‚",
+             ae: "Ù„ÙˆØ­Ø§Øª Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª ÙˆØ§Ù„Ø£Ø¯ÙˆØ§Øª ÙˆØ§Ù„ØªØ®Ø·ÙŠØ·.",
+         },
+         {
+             en: "Dashboards",
+             pt: "PainÃ©is",
+             es: "Paneloj",
+             fr: "Tableaux",
+             de: "Dashboards",
+             cn: " ä»ªè¡¨æ¿ ",
+             ae: "ÙˆØ­Ø§Øª Ø§Ù„Ù‚ÙŠØ§Ø¯Ø© ",
+         },
+         {
+             en: "Default",
+             pt: "PadrÃ£o",
+             es: "Vaikimisi",
+             fr: "DÃ©faut",
+             de: "Standaard",
+             cn: "é›»å­å•†å‹™",
+             ae: "ÙˆØ¥ÙØªØ±Ø§Ø¶ÙŠ",
+         },
+         {
+             en: "Ecommerce",
+             pt: "ComÃ©rcio eletrÃ´nico",
+             es: "Komerco",
+             fr: "Commerce Ã©lectronique",
+             de: "E-commerce",
+             cn: "é›»å­å•†å‹™",
+             ae: "ÙˆØ§Ù„ØªØ¬Ø§Ø±Ø© Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ©",
+         },
+         {
+             en: "Widgets",
+             pt: "Ferramenta",
+             es: "Vidin",
+             fr: "Widgets",
+             de: "Widgets",
+             cn: "å°éƒ¨ä»¶",
+             ae: "ÙˆØ§Ù„Ø­Ø§Ø¬ÙŠØ§Øª",
+         },
+         {
+             en: "Page layout",
+             pt: "Layout da pÃ¡gina",
+             es: "PaÄa aranÄo",
+             fr: "Tableaux",
+             de: "Mise en page",
+             cn: "é é¢ä½ˆå±€",
+             ae: "ÙˆØªØ®Ø·ÙŠØ· Ø§Ù„ØµÙØ­Ø©",
+         },
+         {
+             en: "Applications",
+             pt: "FormulÃ¡rios",
+             es: "Aplikoj",
+             fr: "Applications",
+             de: "Toepassingen",
+             cn: "æ‡‰ç”¨é ˜åŸŸ",
+             ae: "ÙˆØ§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª",
+         },
+         {
+             en: "Ready to use Apps",
+             pt: "Pronto para usar aplicativos",
+             es: "Preta uzi Apps",
+             fr: " Applications prÃªtes Ã  lemploi ",
+             de: "Klaar om apps te gebruiken",
+             cn: "ä»ªè¡¨æ¿",
+             ae: "Ø¬Ø§Ù‡Ø² Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª",
+         },
+     ];
 
-      var i = $(this).find("i").attr("class");
-      var lang = $(this).attr("data-value");
-      var tnum = lang;
-      translate(tnum);
+     jQuery(".mobile-title svg").click(function () {
+         jQuery(".header-mega").toggleClass("d-block");
+     });
 
-      $(".current_lang .lang-txt").text(lang);
-      $(".current_lang i").attr("class", i);
-    });
-  });
+     jQuery(".onhover-dropdown").on("click", function () {
+         jQuery(this).children(".onhover-show-div").toggleClass("active");
+     });
 
-  function translate(tnum) {
-    $(".lan-1").text(trans[0][tnum]);
-    $(".lan-2").text(trans[1][tnum]);
-    $(".lan-3").text(trans[2][tnum]);
-    $(".lan-4").text(trans[3][tnum]);
-    $(".lan-5").text(trans[4][tnum]);
-    $(".lan-6").text(trans[5][tnum]);
-    $(".lan-7").text(trans[6][tnum]);
-    $(".lan-8").text(trans[7][tnum]);
-    $(".lan-9").text(trans[8][tnum]);
-  }
+     jQuery("#flip-btn").click(function () {
+         jQuery(".flip-card-inner").addClass("flipped");
+     });
 
-  var trans = [
-    {
-      en: "General",
-      pt: "Geral",
-      es: "Generalo",
-      fr: "GÃ©nÃ©rale",
-      de: "Generel",
-      cn: "ä¸€èˆ¬",
-      ae: "Ø­Ø¬Ù†Ø±Ø§Ù„ Ù„ÙˆØ§Ø¡",
-    },
-    {
-      en: "Dashboards,widgets & layout.",
-      pt: "PainÃ©is, widgets e layout.",
-      es: "Paneloj, fenestraÄµoj kaj aranÄo.",
-      fr: "Tableaux de bord, widgets et mise en page.",
-      de: "Dashboards, widgets en lay-out.",
-      cn: "ä»ªè¡¨æ¿ï¼Œå°å·¥å…·å’Œå¸ƒå±€ã€‚",
-      ae: "Ù„ÙˆØ­Ø§Øª Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª ÙˆØ§Ù„Ø£Ø¯ÙˆØ§Øª ÙˆØ§Ù„ØªØ®Ø·ÙŠØ·.",
-    },
-    {
-      en: "Dashboards",
-      pt: "PainÃ©is",
-      es: "Paneloj",
-      fr: "Tableaux",
-      de: "Dashboards",
-      cn: " ä»ªè¡¨æ¿ ",
-      ae: "ÙˆØ­Ø§Øª Ø§Ù„Ù‚ÙŠØ§Ø¯Ø© ",
-    },
-    {
-      en: "Default",
-      pt: "PadrÃ£o",
-      es: "Vaikimisi",
-      fr: "DÃ©faut",
-      de: "Standaard",
-      cn: "é›»å­å•†å‹™",
-      ae: "ÙˆØ¥ÙØªØ±Ø§Ø¶ÙŠ",
-    },
-    {
-      en: "Ecommerce",
-      pt: "ComÃ©rcio eletrÃ´nico",
-      es: "Komerco",
-      fr: "Commerce Ã©lectronique",
-      de: "E-commerce",
-      cn: "é›»å­å•†å‹™",
-      ae: "ÙˆØ§Ù„ØªØ¬Ø§Ø±Ø© Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ©",
-    },
-    {
-      en: "Widgets",
-      pt: "Ferramenta",
-      es: "Vidin",
-      fr: "Widgets",
-      de: "Widgets",
-      cn: "å°éƒ¨ä»¶",
-      ae: "ÙˆØ§Ù„Ø­Ø§Ø¬ÙŠØ§Øª",
-    },
-    {
-      en: "Page layout",
-      pt: "Layout da pÃ¡gina",
-      es: "PaÄa aranÄo",
-      fr: "Tableaux",
-      de: "Mise en page",
-      cn: "é é¢ä½ˆå±€",
-      ae: "ÙˆØªØ®Ø·ÙŠØ· Ø§Ù„ØµÙØ­Ø©",
-    },
-    {
-      en: "Applications",
-      pt: "FormulÃ¡rios",
-      es: "Aplikoj",
-      fr: "Applications",
-      de: "Toepassingen",
-      cn: "æ‡‰ç”¨é ˜åŸŸ",
-      ae: "ÙˆØ§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª",
-    },
-    {
-      en: "Ready to use Apps",
-      pt: "Pronto para usar aplicativos",
-      es: "Preta uzi Apps",
-      fr: " Applications prÃªtes Ã  lemploi ",
-      de: "Klaar om apps te gebruiken",
-      cn: "ä»ªè¡¨æ¿",
-      ae: "Ø¬Ø§Ù‡Ø² Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª",
-    },
-  ];
+     jQuery("#flip-back").click(function () {
+         jQuery(".flip-card-inner").removeClass("flipped");
+     });
+     // ================== show and hide input start
+     const toggle = document.getElementById("searchIcon")
+     let newinput = false
+     toggle.addEventListener("click", function(){
+         newinput = !newinput
+         if(newinput){
+             document.getElementById("searchInput").classList.add("show")
+         }else{
+             document.getElementById("searchInput").classList.remove("show")
+         }
+     });
+     // ================ show and hide input css end
+ });
 
-  $(".mobile-title svg").click(function () {
-    $(".header-mega").toggleClass("d-block");
-  });
-
-  $(".onhover-dropdown").on("click", function () {
-    $(this).children(".onhover-show-div").toggleClass("active");
-  });
-
-  $("#flip-btn").click(function () {
-    $(".flip-card-inner").addClass("flipped");
-  });
-
-  $("#flip-back").click(function () {
-    $(".flip-card-inner").removeClass("flipped");
-  });
-  // ================== show and hide input start
-  const toggle = document.getElementById("searchIcon")
-  let newinput = false
-  toggle.addEventListener("click", function(){
-    newinput = !newinput
-    if(newinput){
-      document.getElementById("searchInput").classList.add("show")
-    }else{
-      document.getElementById("searchInput").classList.remove("show")
-    }
-  })
-  // ================ show and hide input css end 
-
-})(jQuery);
