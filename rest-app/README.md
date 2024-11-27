@@ -83,21 +83,8 @@ VITE_APP_NAME="\${APP_NAME}"\
 
 In order to create an encryption key for the application run the command <code>php artisan key:generate</code>
 
-### Step 5 - Configure a domain for the application
-
-1. Locate the file <code>C:/xampp/apache/conf/extra/httpd-vhosts.conf</code>
-2. Paste this code to the end of the file <code><VirtualHost *:80>\
-   DocumentRoot "C:/xampp/htdocs/rest-app/rest-app/public/"\
-   ServerName restaurant.io\
-   ServerAlias www.restaurant.io\
-   ErrorLog "logs/restaurant-error.log"\
-   CustomLog "logs/restaurant-access.log" common\
-   \</VirtualHost></code>
-3. Save it and locate the file <code>C:/Windows/System32/drivers/etc/hosts</code>
-4. Open using Notepad or [Notepad++](https://notepad-plus-plus.org/downloads/v8.6.7/) with admin credentials
-5. Add to the end of the file this <code>127.0.0.1    restaurant.io</code>
-6. Save the file
-
-### Step 6 - Run the Application
+### Step 5 - Run the Application
 
 Run on the terminal inside root folder the command <code>php artisan serve</code>
+
+You should see the application on hte following link [http://127.0.0.1:8000](http://127.0.0.1:8000)
