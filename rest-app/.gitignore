@@ -22,3 +22,8 @@ yarn-error.log
 /.vscode
 /.zed
 /public/assets/build
+../applications.html
+../bitnami.css
+../dashboard
+../index.php
+../xammp
