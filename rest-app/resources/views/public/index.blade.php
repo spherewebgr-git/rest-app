@@ -29,50 +29,33 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link p-0 active" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link p-0" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link p-0" href="menu.html">Menu</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">Pages</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
-                                    <a class="dropdown-item" href="about.html">About</a>
-                                    <a class="dropdown-item" href="gallery.html">Gallery</a>
-                                    <a class="dropdown-item" href="menu.html">Menu</a>
-                                    <a class="dropdown-item" href="team.html">Team</a>
-                                    <a class="dropdown-item" href="shop.html">Shop</a>
-                                    <a class="dropdown-item" href="cart.html">Cart</a>
-                                    <a class="dropdown-item" href="product-detail.html">Product Detail</a>
-                                    <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                    <a class="dropdown-item" href="404.html">404</a>
-                                    <a class="dropdown-item" href="coming-soon.html">Coming Soon</a>
-                                    <a class="dropdown-item" href="testimonial.html">Testimonial</a>
 
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle p-0" href="blog.html" id="navbarDropdown4" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                                    <a class="dropdown-item" href="blog.html">Blog</a>
-                                    <a class="dropdown-item" href="load-more.html">Load More</a>
-                                    <a class="dropdown-item" href="single-blog.html">Single Blog</a>
-                                    <a class="dropdown-item" href="one-column.html">One Column</a>
-                                    <a class="dropdown-item" href="two-column.html">Two Column</a>
-                                    <a class="dropdown-item" href="three-column.html">Three Column</a>
-                                    <a class="dropdown-item" href="three-colum-sidbar.html">Three Column Sidbar</a>
-                                    <a class="dropdown-item" href="four-column.html">Four Column</a>
-                                    <a class="dropdown-item" href="six-colum-full-wide.html">Six Column</a>
-                                </div>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="#ourMenu">Our Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link p-0" href="contact.html">Contact</a>
+                                <a class="nav-link p-0" href="#reserveTable">Reserve a table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="#testimonials">Testimonials</a>
+                            </li>
+{{--                            <li class="nav-item dropdown">--}}
+{{--                                <a class="nav-link dropdown-toggle p-0" href="blog.html" id="navbarDropdown4" role="button"--}}
+{{--                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>--}}
+{{--                                <div class="dropdown-menu" aria-labelledby="navbarDropdown4">--}}
+{{--                                    <a class="dropdown-item" href="blog.html">Blog</a>--}}
+{{--                                    <a class="dropdown-item" href="load-more.html">Load More</a>--}}
+{{--                                    <a class="dropdown-item" href="single-blog.html">Single Blog</a>--}}
+{{--                                    <a class="dropdown-item" href="one-column.html">One Column</a>--}}
+{{--                                    <a class="dropdown-item" href="two-column.html">Two Column</a>--}}
+{{--                                    <a class="dropdown-item" href="three-column.html">Three Column</a>--}}
+{{--                                    <a class="dropdown-item" href="three-colum-sidbar.html">Three Column Sidbar</a>--}}
+{{--                                    <a class="dropdown-item" href="four-column.html">Four Column</a>--}}
+{{--                                    <a class="dropdown-item" href="six-colum-full-wide.html">Six Column</a>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="/contact">Contact</a>
                             </li>
                         </ul>
                         <!-- navbar collapse -->
@@ -82,7 +65,7 @@
                             <li class="d-inline-block icon-listing"><a class="icon position-relative d-inline-block" href="#search">
                                     <figure class=""><img src="{{asset('assets/website/images/search-icon.png')}}" alt=""></figure>
                                 </a></li>
-                            <li class="d-inline-block btn-listing"><a href="shop.html" class="contact-btn d-inline-block">Order
+                            <li class="d-inline-block btn-listing"><a href="#reserveTable" class="contact-btn d-inline-block">Book
                                     Now</a></li>
                             <!-- list unstyled -->
                         </ul>
@@ -237,612 +220,10 @@
         <!-- categories con -->
     </section>
 
-    <!-- ABOUT US SECTION -->
-    <section class="float-left w-100 position-relative about-us-con padding-top padding-bottom main-box background-f7f9ff">
-        <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6 order-xl-0 order-lg-0 order-md-0 order-1">
-                    <div class="about-us-content">
-                        <div class="heading-title-con mb-0">
-                            <span class="d-block special-text green-text playfair-font font-weight-light">About Us</span>
-                            <h2>Why We Are <br>
-                                The Best</h2>
-                            <p>Quis autem vel eum iure reprehenderit qui in evoluptate velit esse quam nihil molestiae consequatur, vel
-                                illum qui dolorem eum fugiat quo voluptas nulla pariatureaque ipsa quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt explicabo.</p>
-                            <!-- heading title con -->
-                        </div>
-                        <div class="about-services">
-                            <div class="abt-service-box text-center">
-                                <figure><img src="{{asset('assets/website/images/about-services-img1.png')}}" alt="icon" class="img-fluid"></figure>
-                                <span class="barlow-font d-block mb-0">Buffet Service</span>
-                                <!--  -->
-                            </div>
-                            <div class="abt-service-box text-center">
-                                <figure><img src="{{asset('assets/website/images/about-services-img2.png')}}" alt="icon" class="img-fluid"></figure>
-                                <span class="barlow-font d-block mb-0">Home Delivery</span>
-                                <!--  -->
-                            </div>
-                            <div class="abt-service-box text-center">
-                                <figure><img src="{{asset('assets/website/images/about-services-img3.png')}}" alt="icon" class="img-fluid"></figure>
-                                <span class="barlow-font d-block mb-0">Online Booking</span>
-                                <!--  -->
-                            </div>
-                            <div class="abt-service-box text-center">
-                                <figure><img src="{{asset('assets/website/images/about-services-img4.png')}}" alt="icon" class="img-fluid"></figure>
-                                <span class="barlow-font d-block mb-0">Discount</span>
-                                <!--  -->
-                            </div>
-                            <!-- about services -->
-                        </div>
-                        <!-- about us content  -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="about-img-con position-relative">
-                        <figure><img src="{{asset('assets/website/images/about-img.jpg')}}" alt="image"
-                                     class="img-fluid position-relative z-index-1 border-radius5">
-                        </figure>
-                        <figure><img src="{{asset('assets/website/images/ellipse2.png')}}" alt="image" class="position-absolute elipse2"></figure>
 
-                        <!-- about img con -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <!-- row -->
-            </div>
-            <!-- container -->
-        </div>
-    </section>
-
-    <!-- FEATUREED DISHES SECTION -->
-    <section class="float-left w-100 position-relative featured-dishes-con padding-top padding-bottom main-box">
-        <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-            <div class="heading-title-con text-center">
-                <span class="d-block special-text green-text playfair-font font-weight-light">Popular Items</span>
-                <h2 class="mb-0">Featured Dishes</h2>
-                <!-- heading title con -->
-            </div>
-            <div class="tabs-box tabs-options">
-                <div class="row">
-                    <div class="col-lg-2 col-md-12">
-                        <ul class="nav nav-tabs justify-content-center align-items-center d-block border-bottom-0">
-                            <li><a class="active" data-toggle="tab" href="#breakfast">Breakfast</a></li>
-                            <li><a data-toggle="tab" href="#lunch">Lunch</a></li>
-                            <li><a data-toggle="tab" href="#dinner">Dinner</a></li>
-                            <li><a data-toggle="tab" href="#desserts">Desserts</a></li>
-                            <li><a data-toggle="tab" href="#fastfood">Fast food</a></li>
-                            <li><a data-toggle="tab" href="#drinks">Drinks</a></li>
-                            <li><a data-toggle="tab" href="#soups">Soups</a></li>
-                        </ul>
-                        <!-- col -->
-                    </div>
-                    <div class="col-lg-10 col-md-12">
-                        <div class="tab-content">
-                            <div id="breakfast" class="tab-pane fade in active show">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img1.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Eggs Chopies <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$15</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img2.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Chochin Cake <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('/assets/website/images/food-dish-img3.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Buna Kirchi <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <!-- row -->
-                                </div>
-
-                                <!-- breakfast -->
-                            </div>
-                            <div id="lunch" class="tab-pane fade">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img3.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Buna Kirchi <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img2.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Chochin Cake <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img1.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Eggs Chopies <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$15</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-
-                                    <!-- row -->
-                                </div>
-                                <!-- lunch -->
-                            </div>
-                            <div id="dinner" class="tab-pane fade">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img3.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Buna Kirchi <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img1.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Eggs Chopies <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$15</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img2.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Chochin Cake <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <!-- row -->
-                                </div>
-
-                                <!-- lunch -->
-                            </div>
-                            <div id="desserts" class="tab-pane fade">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img3.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Buna Kirchi <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img1.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Eggs Chopies <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$15</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img2.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Chochin Cake <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-
-                                    <!-- row -->
-                                </div>
-                                <!-- lunch -->
-                            </div>
-                            <div id="fastfood" class="tab-pane fade">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img2.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Chochin Cake <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img1.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Eggs Chopies <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$15</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img3.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Buna Kirchi <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <!-- row -->
-                                </div>
-                                <!-- fast food -->
-                            </div>
-                            <div id="drinks" class="tab-pane fade">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img2.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Chochin Cake <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img3.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Buna Kirchi <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img1.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Eggs Chopies <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$15</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <!-- row -->
-                                </div>
-                                <!-- drinks -->
-                            </div>
-                            <div id="soups" class="tab-pane fade">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img1.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Eggs Chopies <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$15</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img3.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Buna Kirchi <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 d-flex">
-                                        <div class="feature-dish-box position-relative w-100">
-                                            <figure><img src="{{asset('assets/website/images/food-dish-img2.jpg')}}" alt="image" class="img-fluid"></figure>
-                                            <div class="dish-content">
-                                                <h4>Chochin Cake <span
-                                                        class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
-                                                </h4>
-                                                <p>Fugiat quo voluptas nulla
-                                                    inventore veritatis .</p>
-                                                <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                                <a href="cart.html">
-                                                    <div class="plus-icon-box position-absolute">
-                                                        <figure><img src="{{asset('assets/website/images/plus-icon.png')}}" alt="icon"></figure>
-                                                    </div>
-                                                </a>
-                                                <!-- dish content -->
-                                            </div>
-
-                                            <!-- feature dish box -->
-                                        </div>
-                                        <!-- col -->
-                                    </div>
-                                    <!-- row -->
-                                </div>
-                                <!-- soups -->
-                            </div>
-
-                        </div>
-                        <!-- col -->
-                    </div>
-                    <!-- row -->
-                </div>
-                <!-- tabs box -->
-            </div>
-            <!-- container -->
-        </div>
-        <!-- featured dishes con -->
-    </section>
 
     <!-- OUR MENU SECTION -->
-    <section class="float-left w-100 position-relative our-menu-con padding-top padding-bottom main-box background-f7f9ff">
+    <section id="ourMenu" class="float-left w-100 position-relative our-menu-con padding-top padding-bottom main-box background-f7f9ff">
         <figure class=""><img src="{{asset('assets/website/images/vector1.png')}}" alt="vector" class="position-absolute vector"></figure>
         <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="heading-title-con text-center">
@@ -943,7 +324,7 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <div class="float-left w-100 position-relative testimonials-con padding-top padding-bottom main-box">
+    <div id="testimonials" class="float-left w-100 position-relative testimonials-con padding-top padding-bottom main-box">
         <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5">
@@ -1001,7 +382,7 @@
     </div>
 
     <!-- RESERVE A TABLE SECTION -->
-    <section
+    <section id="reserveTable"
         class="float-left w-100 position-relative padding-top padding-bottom main-box reserve-table-con background-f7f9ff">
         <div class="container wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="heading-title-con text-center">
@@ -1055,15 +436,11 @@
                         <ul class="list-unstyled p-0 m-0">
                             <li class="position-relative">
                                 <span class="d-block sub-head days barlow-font">Monday – Saturday </span>
-                                <p class="mb-0"> 12.00 – 14.45</p>
-                            </li>
-                            <li class="position-relative">
-                                <span class="d-block sub-head days barlow-font">Sunday – Thursday</span>
-                                <p class="mb-0"> 17.30 – 00.00</p>
+                                <p class="mb-0"> 12.00 – 00.00</p>
                             </li>
                             <li class="position-relative mb-0">
-                                <span class="d-block sub-head days barlow-font">Friday – Saturday</span>
-                                <p class="mb-0"> 17.30 – 00.00</p>
+                                <span class="d-block sub-head days barlow-font">Sunday</span>
+                                <p class="mb-0"> 14.30 – 00.00</p>
                             </li>
                             <!-- list unstyled -->
                         </ul>
@@ -1075,12 +452,10 @@
                     <div class="footer-inner-con">
                         <span class="text-white span-heading d-block playfair-font">Useful Links</span>
                         <ul class="list-unstyled p-0 m-0">
-                            <li class="position-relative"><a href="index.html" class="d-inline-block">Home</a></li>
-                            <li class="position-relative"><a href="about.html" class="d-inline-block">About</a></li>
-                            <li class="position-relative"><a href="menu.html" class="d-inline-block">Menu</a></li>
-                            <li class="position-relative"><a href="gallery.html" class="d-inline-block">Gallery</a></li>
-                            <li class="position-relative"><a href="blog.html" class="d-inline-block">Blog</a></li>
-                            <li class="position-relative"><a href="contact.html" class="d-inline-block">Contact</a></li>
+                            <li class="position-relative"><a href="#ourMenu" class="d-inline-block">Our menu</a></li>
+                            <li class="position-relative"><a href="#testimonials" class="d-inline-block">Testimonials</a></li>
+                            <li class="position-relative"><a href="#reserveTable" class="d-inline-block">Reserve a Table</a></li>
+                            <li class="position-relative"><a href="/contact" class="d-inline-block">Contact</a></li>
                             <!-- list unstyled -->
                         </ul>
                         <!-- footer inner con -->
@@ -1093,12 +468,12 @@
                         <ul class="list-unstyled p-0 m-0">
                             <li class="position-relative">
                                 <span class="d-block sub-head barlow-font">Address: </span>
-                                <p class="mb-0">121 King Street Melbourne,3000, <br>
-                                    Australia</p>
+                                <p class="mb-0">25 Queen St, Derby, DE1 3DS <br>
+                                    England</p>
                             </li>
                             <li class="position-relative">
                                 <span class="d-block sub-head barlow-font">Email:</span>
-                                <a href="mailto:info@foodzey.com">info@foodzey.com</a>
+                                <a href="mailto:info@foodzey.com">info@rest.io</a>
                             </li>
                             <li class="position-relative mb-0">
                                 <span class="d-block sub-head barlow-font">Phone:</span>
