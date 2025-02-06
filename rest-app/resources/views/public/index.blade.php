@@ -121,12 +121,13 @@
                                 </li>
                             </ul>
                             <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <figure><img src="{{asset('assets/website/images/banner-img2.png')}}" alt="image" class="img-fluid"></figure>
-                                </div>
                                 <div class="carousel-item active">
                                     <figure><img src="{{asset('assets/website/images/banner-img1.png')}}" alt="image" class="img-fluid"></figure>
                                 </div>
+                                <div class="carousel-item">
+                                    <figure><img src="{{asset('assets/website/images/banner-img2.png')}}" alt="image" class="img-fluid"></figure>
+                                </div>
+
                                 <div class="carousel-item">
                                     <figure><img src="{{asset('assets/website/images/banner-img3.png')}}" alt="image" class="img-fluid"></figure>
                                 </div>
