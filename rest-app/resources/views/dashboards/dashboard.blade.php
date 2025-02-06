@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="A Restaurant Application Web-based System">
-    <meta name="author" content="MC class CS Team 3">
-
-    <title>{{ config('app.name', 'Restaurant Application Management System') }}</title>
-
+    <meta name="description" content="Restaurant Index Page">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
+    <title>New Restaurant in town</title>
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-
-    <!-- Scripts -->
-    @vite([
-        'resources/css/app.css',
-        'resources/css/vendors/icofont.css',
-        'resources/css/vendors/bootstrap.css',
-        'resources/css/style.css',
-        'resources/css/color-1.css',
-        ])
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/icofont.css')}}">
+    <link rel="icon" href="{{asset('assets/svg/landing-icons.svg')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/slick-theme.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/animate.css')}}">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/bootstrap.css')}}">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
 </head>
 <body>
 <!-- loader starts-->

@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> Resty | Home </title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Restaurant Index Page">
-    <meta name="author" content="pixelstrap">
-    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-    <title>New Restaurant in town</title>
-    <!-- Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/icofont.css')}}">
-    <link rel="icon" href="{{asset('assets/svg/landing-icons.svg')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/slick-theme.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/animate.css')}}">
-    <!-- Bootstrap css-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/bootstrap.css')}}">
-    <!-- App css-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
-    <!-- Responsive css-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('assets/website/images/favicon/apple-icon-57x57.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('assets/website/images/favicon/apple-icon-60x60.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets/website/images/favicon/apple-icon-72x72.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/website/images/favicon/apple-icon-76x76.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('assets/website/images/favicon/apple-icon-114x114.png')}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('assets/website/images/favicon/apple-icon-120x120.png')}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('assets/website/images/favicon/apple-icon-144x144.png')}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('assets/website/images/favicon/apple-icon-152x152.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/website/images/favicon/apple-icon-180x180.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('assets/website/images/favicon/android-icon-192x192.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/website/images/favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('assets/website/images/favicon/favicon-96x96.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/website/images/favicon/favicon-16x16.png')}}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{asset('assets/website/images/favicon/ms-icon-144x144.png')}}">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- StyleSheet link CSS -->
+    <link rel="stylesheet" href="{{asset('assets/website/css/animate.css')}}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="{{asset('assets/website/bootstrap/bootstrap.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/website/css/superclasses.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/website/css/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/website/css/owl.theme.default.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/website/css/custom.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/website/css/responsive.css')}}" type="text/css">
 </head>
 
 <body>
 
 @yield('content')
 
-<!-- latest jquery-->
-<script src="{{asset('assets/js/jquery-3.6.0.min.js')}}"></script>
 
-<!-- Bootstrap js-->
-<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-<!-- feather icon js-->
-<script src="{{asset('assets/js/feather.min.js')}}"></script>
-<script src="{{asset('assets/js/feather-icon.js')}}"></script>
-<!-- Plugins JS start-->
-<script src="{{asset('assets/js/tooltip-init.js')}}"></script>
-<script src="{{asset('assets/js/animation/wow.min.js')}}"></script>
-<script src="{{asset('assets/js/landing_sticky.js')}}"></script>
-<script src="{{asset('assets/js/landing.js')}}"></script>
-<script src="{{asset('assets/js/slick/slick.min.js')}}"></script>
-<script src="{{asset('assets/js/slick/slick.js')}}"></script>
-<script src="{{asset('assets/js/landing-slick.js')}}"></script>
-<script src="{{asset('assets/js/header-slick.js')}}"></script>
+<!-- BACK TO TOP BUTTON -->
+<button id="back-to-top-btn" title="Back to Top"></button>
+<script src="{{asset('/assets/website/js/jquery.min.js')}}"></script>
+<script src="{{asset('/assets/website/js/popper.min.js')}}"></script>
+<script src="{{asset('/assets/website/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('/assets/website/js/owl.carousel.js')}}"></script>
+<script src="{{asset('/assets/website/js/contact-form.js')}}"></script>
+<script src="{{asset('/assets/website/js/video-popup.js')}}"></script>
+<script src="{{asset('/assets/website/js/video-section.js')}}"></script>
+<script src="{{asset('/assets/website/js/jquery.validate.js')}}"></script>
+<script src="{{asset('/assets/website/js/wow.js')}}"></script>
+<script src="{{asset('/assets/website/js/counter.js')}}"></script>
+<script src="{{asset('/assets/website/js/jquery-ui.js')}}"></script>
+<script src="{{asset('/assets/website/js/jquery.royalslider.min.js')}}"></script>
+<script src="{{asset('/assets/website/js/jquery.easing-1.3.js')}}"></script>
+<script src="{{asset('/assets/website/js/custom.js')}}"></script>
+<script src="{{asset('/assets/website/js/search.js')}}"></script>
+
 </body>
 </html>
