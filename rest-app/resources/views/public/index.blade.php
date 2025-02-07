@@ -62,9 +62,7 @@
                     </div>
                     <div class="header-contact">
                         <ul class="list-unstyled mb-0">
-                            <li class="d-inline-block icon-listing"><a class="icon position-relative d-inline-block" href="#search">
-                                    <figure class=""><img src="{{asset('assets/website/images/search-icon.png')}}" alt=""></figure>
-                                </a></li>
+
                             <li class="d-inline-block btn-listing"><a href="#reserveTable" class="contact-btn d-inline-block">Book
                                     Now</a></li>
                             <!-- list unstyled -->
@@ -76,13 +74,6 @@
             </div>
             <!-- header-con -->
         </header>
-        <!-- SEARCH BAR -->
-        <div id="search" class="">
-            <span class="close">X</span>
-            <form role="search" id="searchform" method="get">
-                <input value="" name="q" type="search" placeholder="Type to Search">
-            </form>
-        </div>
         <!-- BANNER SECTION -->
         <section class="float-left w-100 banner-con postion-relative main-box">
             <div class="container">
@@ -130,14 +121,12 @@
                     <div class="col-lg-5 col-md-5">
                         <div class="banner-content-con">
                             <span class="d-block navy-text playfair-font position-relative">Welcome to our</span>
-                            <h1 class="navy-text"><span class="d-block green-text">Delicious</span>Food Collection</h1>
-                            <p class="font-weight-light">Duis aute irure dolor in reprehenderit in vole uatate velit esse cillum dolore.
+                            <h1 class="navy-text"><span class="d-block green-text">Cozy</span>Restaurant</h1>
+                            <p class="font-weight-light">A restaurant located in the heart of Derby!
                             </p>
-                            <div class="elementary-button d-inline-block">
-                                <a href="about.html" class="d-inline-block">About Us</a>
-                            </div>
+
                             <div class="secondary-button d-inline-block">
-                                <a href="menu.html" class="d-inline-block">Our Menu</a>
+                                <a href="#ourMenu" class="d-inline-block">Our Menu</a>
                             </div>
                             <!-- banner content con -->
                         </div>
@@ -154,17 +143,14 @@
 
     <!-- CATEGORIES SECION  -->
     <section class="float-left w-100 position-relative categories-con padding-top padding-bottom main-box">
-        <figure class=""><img src="{{asset('assets/website//images/vector.png')}}" alt="vector" class="position-absolute vector"></figure>
+        <figure class=""><img src="{{asset('assets/website/images/vector.png')}}" alt="vector" class="position-absolute vector"></figure>
         <div class="container wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
             <div class="row">
                 <div class="col-lg-6 col-md-6 d-flex">
-                    <div class="category-box var1 w-100 position-relative">
+                    <div class="category-box var1 w-100 position-relative" style="background-image: url({{asset('assets/website/images/burgers.jpg')}})">
                         <div class="category-content z-index-1 position-relative">
                             <h3 class="text-white">Burgers</h3>
                             <p class="text-white">Duis aute irure dolor in reprehenderit vole.</p>
-                            <div class="primary-button d-inline-block">
-                                <a href="cart.html" class="d-inline-block">Order Now</a>
-                            </div>
                             <!-- category content -->
                         </div>
                         <!-- category box -->
@@ -172,13 +158,10 @@
                     <!-- col -->
                 </div>
                 <div class="col-lg-6 col-md-6 d-flex">
-                    <div class="category-box var2 w-100 position-relative">
+                    <div class="category-box var2 w-100 position-relative" style="background-image: url({{asset('assets/website/images/fries.jpg')}})">
                         <div class="category-content z-index-1 position-relative">
                             <h3 class="text-white">Fries</h3>
                             <p class="text-white">Duis aute irure dolor in reprehenderit vole.</p>
-                            <div class="primary-button d-inline-block">
-                                <a href="cart.html" class="d-inline-block">Order Now</a>
-                            </div>
                             <!-- category content -->
                         </div>
                         <!-- category box -->
@@ -186,13 +169,10 @@
                     <!-- col -->
                 </div>
                 <div class="col-lg-6 col-md-6 d-flex">
-                    <div class="category-box var3 w-100 position-relative">
+                    <div class="category-box var3 w-100 position-relative" style="background-image: url({{asset('assets/website/images/drinks.jpg')}})">
                         <div class="category-content z-index-1 position-relative float-right">
                             <h3 class="text-white">Drinks</h3>
                             <p class="text-white">Duis aute irure dolor in reprehenderit vole.</p>
-                            <div class="primary-button d-inline-block">
-                                <a href="cart.html" class="d-inline-block">Order Now</a>
-                            </div>
                             <!-- category content -->
                         </div>
                         <!-- category box -->
@@ -200,13 +180,10 @@
                     <!-- col -->
                 </div>
                 <div class="col-lg-6 col-md-6 d-flex">
-                    <div class="category-box var4 w-100 position-relative">
+                    <div class="category-box var4 w-100 position-relative" style="background-image: url({{asset('assets/website/images/sandwiches.jpg')}})">
                         <div class="category-content z-index-1 position-relative float-right">
                             <h3 class="text-white">Sandwich</h3>
                             <p class="text-white">Duis aute irure dolor in reprehenderit vole.</p>
-                            <div class="primary-button d-inline-block">
-                                <a href="cart.html" class="d-inline-block">Order Now</a>
-                            </div>
                             <!-- category content -->
                         </div>
                         <!-- category box -->
@@ -234,13 +211,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 d-flex left-side flex-column">
                     <div class="menu-box w-100 position-relative d-flex align-items-center justify-content-between">
-                        <figure><img src="{{asset('assets/website/images/menu-img1.png')}}" alt="image"></figure>
+                        <figure><img src="{{asset('assets/website/images/thai-noodles.png')}}" alt="thai noodles"></figure>
                         <div class="menu-content">
                             <h4>Thai Noodles <span
                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
                             </h4>
                             <p>Quia voluptas sit aspernatur aut odit aut fugit</p>
-                            <a href="shop.html" class="d-inline-block">Order Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
                             <!-- menu content -->
                         </div>
                         <!-- menu box -->
@@ -252,7 +228,6 @@
                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$50</span>
                             </h4>
                             <p>Quia voluptas sit aspernatur aut odit aut fugit</p>
-                            <a href="shop.html" class="d-inline-block">Order Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
                             <!-- menu content -->
                         </div>
                         <!-- menu box -->
@@ -264,7 +239,6 @@
                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$90</span>
                             </h4>
                             <p>Quia voluptas sit aspernatur aut odit aut fugit</p>
-                            <a href="shop.html" class="d-inline-block">Order Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
                             <!-- menu content -->
                         </div>
                         <!-- menu box -->
@@ -279,7 +253,6 @@
                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$20</span>
                             </h4>
                             <p>Quia voluptas sit aspernatur aut odit aut fugit</p>
-                            <a href="shop.html" class="d-inline-block">Order Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
                             <!-- menu content -->
                         </div>
                         <!-- menu box -->
@@ -291,7 +264,6 @@
                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$60</span>
                             </h4>
                             <p>Quia voluptas sit aspernatur aut odit aut fugit</p>
-                            <a href="shop.html" class="d-inline-block">Order Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
                             <!-- menu content -->
                         </div>
                         <!-- menu box -->
@@ -303,7 +275,6 @@
                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$70</span>
                             </h4>
                             <p>Quia voluptas sit aspernatur aut odit aut fugit</p>
-                            <a href="shop.html" class="d-inline-block">Order Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
                             <!-- menu content -->
                         </div>
                         <!-- menu box -->
@@ -314,7 +285,7 @@
             </div>
             <div class="float-left w-100 text-center view-all-item-con">
                 <div class="secondary-button d-inline-block">
-                    <a href="menu.html" class="d-inline-block">View All Items</a>
+                    <a href="/menu" class="d-inline-block">View the Entire Menu</a>
                 </div>
                 <!-- view all item con -->
             </div>
