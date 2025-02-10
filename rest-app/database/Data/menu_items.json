@@ -1,0 +1,26 @@
+[
+    {
+        "menuItemName": "NOCELLARA OLIVES",
+        "menuItemDescription": "",
+        "menuItemPrice": 3.25,
+        "menuItemType": "Appetisers"
+    },
+    {
+        "menuItemName": "FRESHLY BAKED BREAD",
+        "menuItemDescription": "loaf bakery bread, netherend farm salted butter",
+        "menuItemPrice": 3.5,
+        "menuItemType": "Appetisers"
+    },
+    {
+        "menuItemName": "PADRON PEPPERS",
+        "menuItemDescription": "",
+        "menuItemPrice": 5.5,
+        "menuItemType": "Appetisers"
+    },
+    {
+        "menuItemName": "SOUP OF THE DAY",
+        "menuItemDescription": "warm loaf bakery bread",
+        "menuItemPrice": 5.25,
+        "menuItemType": "Starters"
+    }
+]

@@ -1,3 +1,4 @@
+
 <!-- FEATUREED DISHES SECTION -->
 <section
     class="float-left w-100 position-relative featured-dishes-con padding-top padding-bottom main-box horizonal-listing">
@@ -11,7 +12,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <ul class="nav nav-tabs justify-content-center align-items-center d-flex border-bottom-0">
-                        <li><a class="active" data-toggle="tab" href="#breakfast">Breakfast</a></li>
+                        <li><a class="active" data-toggle="tab" href="#appetisers">Appetisers</a></li>
                         <li><a data-toggle="tab" href="#lunch">Lunch</a></li>
                         <li><a data-toggle="tab" href="#dinner">Dinner</a></li>
                         <li><a data-toggle="tab" href="#desserts">Desserts</a></li>
@@ -20,93 +21,30 @@
                         <li><a data-toggle="tab" href="#soups">Soups</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div id="breakfast" class="tab-pane fade in active show">
+                        <div id="appetisers" class="tab-pane fade in active show">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img4.jpg')}}" alt="image"></figure>
+                                @foreach($menuitems as $item)
+                                    <div class="feature-dish-box position-relative w-100 d-flex align-items-center col-lg-6 col-md-6">
+                                        <figure><img src="{{$item->menuItemImage ?? asset('assets/website/images/food-dish-img4.jpg')}}"
+                                                    style="width:242px;height:248px" alt="image"></figure>
                                         <div class="dish-content">
-                                            <h4>Eggs Chopies <span
-                                                    class="d-inline-block float-right green-text price barlow-font font-weight-600">$15</span>
+                                            <h4>{{$item->menuItemName}} <span
+                                                    class="d-inline-block float-right green-text price barlow-font font-weight-600">${{$item->menuItemPrice}}</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>{{$item->menuItemDescription}}</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
 
                                             <!-- dish content -->
                                         </div>
 
                                         <!-- feature dish box -->
                                     </div>
-                                    <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}" alt="image"></figure>
-                                        <div class="dish-content">
-                                            <h4>Buna Kirchi <span
-                                                    class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
-                                            </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                            <!-- dish content -->
-                                        </div>
+                                @endforeach
 
-                                        <!-- feature dish box -->
-                                    </div>
-                                    <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img6.jpg')}}" alt="image"></figure>
-                                        <div class="dish-content">
-                                            <h4>Yummy Noodles <span
-                                                    class="d-inline-block float-right green-text price barlow-font font-weight-600">$60</span>
-                                            </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                            <!-- dish content -->
-                                        </div>
-
-                                        <!-- feature dish box -->
-                                    </div>
                                     <!-- col -->
                                 </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img7.jpg')}}" alt="image"></figure>
-                                        <div class="dish-content">
-                                            <h4>Chochin Cake <span
-                                                    class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
-                                            </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                            <!-- dish content -->
-                                        </div>
 
-                                        <!-- feature dish box -->
-                                    </div>
-                                    <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}" alt="image"></figure>
-                                        <div class="dish-content">
-                                            <h4>Sweet Sandwich <span
-                                                    class="d-inline-block float-right green-text price barlow-font font-weight-600">$50</span>
-                                            </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                            <!-- dish content -->
-                                        </div>
-
-                                        <!-- feature dish box -->
-                                    </div>
-                                    <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img9.jpg')}}" alt="image"></figure>
-                                        <div class="dish-content">
-                                            <h4>Chiken Toast <span
-                                                    class="d-inline-block float-right green-text price barlow-font font-weight-600">$70</span>
-                                            </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
-                                            <!-- dish content -->
-                                        </div>
-
-                                        <!-- feature dish box -->
-                                    </div>
-                                    <!-- col -->
-                                </div>
 
                                 <!-- row -->
                             </div>
@@ -116,13 +54,16 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Buna Kirchi <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -132,13 +73,16 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img9.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img9.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Chiken Toast <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$70</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -155,13 +99,16 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img6.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img6.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Yummy Noodles <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$60</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -171,13 +118,16 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Sweet Sandwich <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$50</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -194,13 +144,16 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img7.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img7.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Chochin Cake <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -211,13 +164,16 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Sweet Sandwich <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$50</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -234,26 +190,32 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Sweet Sandwich <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$50</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
                                         <!-- feature dish box -->
                                     </div>
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img9.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img9.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Chiken Toast <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$70</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -263,26 +225,32 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Buna Kirchi <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
                                         <!-- feature dish box -->
                                     </div>
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img6.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img6.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Yummy Noodles <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$60</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -299,13 +267,16 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img6.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img6.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Yummy Noodles <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$60</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -315,13 +286,16 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Buna Kirchi <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -338,26 +312,32 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img7.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img7.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Chochin Cake <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$30</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
                                         <!-- feature dish box -->
                                     </div>
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img5.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Buna Kirchi <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$40</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
@@ -367,26 +347,32 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img8.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Sweet Sandwich <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$50</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
                                         <!-- feature dish box -->
                                     </div>
                                     <div class="feature-dish-box position-relative w-100 d-flex align-items-center">
-                                        <figure><img src="{{asset('assets/website/images/food-dish-img9.jpg')}}" alt="image"></figure>
+                                        <figure><img src="{{asset('assets/website/images/food-dish-img9.jpg')}}"
+                                                     alt="image"></figure>
                                         <div class="dish-content">
                                             <h4>Chiken Toast <span
                                                     class="d-inline-block float-right green-text price barlow-font font-weight-600">$70</span>
                                             </h4>
-                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt exlicao.</p>
-                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image" class="border-radius0">
+                                            <p>Quisquam est, qui dolorem ipsum quia dolor sit amet vitae dicta sunt
+                                                exlicao.</p>
+                                            <img src="{{asset('assets/website/images/stars.png')}}" alt="image"
+                                                 class="border-radius0">
                                             <!-- dish content -->
                                         </div>
 
