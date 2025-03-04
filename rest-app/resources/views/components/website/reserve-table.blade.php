@@ -9,7 +9,8 @@
         </div>
         <div class="row">
             <div class="col-xl-12 col-lg-12">
-                <form class="main-form text-center" method="post" id="contactpage">
+                <form class="main-form text-center" method="post" id="contactpage" action="{{route('front.reserve')}}">
+                    @csrf
                     <ul class="list-unstyled p-0 float-left w-100">
                         <li>
                             <input type="text" placeholder="Name" name="fname" id="fname">

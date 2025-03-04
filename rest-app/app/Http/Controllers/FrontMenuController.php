@@ -11,4 +11,8 @@ class FrontMenuController extends Controller
         $menuitems = MenuItem::all();
         return view('public.menu',['menuitems'=>$menuitems]);
     }
+
+    public function reserve(Request $request) {
+        dd($request);
+    }
 }
