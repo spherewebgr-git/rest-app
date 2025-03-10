@@ -83,7 +83,11 @@ VITE_APP_NAME="\${APP_NAME}"\
 
 In order to create an encryption key for the application run the command <code>php artisan key:generate</code>
 
-### Step 5 - Run the Application
+### Step 5 - Migrate Database and Data
+
+Run on the terminal inside root folder the command <code>php artisan migrate:fresh --seed</code>
+
+### Step 6 - Run the Application
 
 Run on the terminal inside root folder the command <code>php artisan serve</code>
 
