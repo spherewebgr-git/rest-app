@@ -1,5 +1,5 @@
 @extends('layouts.dashboards')
-
+@section('page_title') Manager Dashboard @endsection
 @section('content')
 <!-- loader starts-->
 <div class="loader-wrapper">
