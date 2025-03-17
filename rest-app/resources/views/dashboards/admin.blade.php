@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Restaurant Index Page">
-    <meta name="author" content="pixelstrap">
-    <link rel="icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/x-icon">
-    <title>New Restaurant in town</title>
-    <!-- Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/icofont.css')}}">
-    <link rel="icon" href="{{asset('assets/svg/landing-icons.svg')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/slick-theme.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/animate.css')}}">
-    <!-- Bootstrap css-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendors/bootstrap.css')}}">
-    <!-- App css-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
-    <!-- Responsive css-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
-</head>
-<body>
+@extends('layouts.dashboards')
+
+@section('content')
 <!-- loader starts-->
 <div class="loader-wrapper">
     <div class="loader">
@@ -1531,27 +1505,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 footer-copyright text-center">
-                        <p class="mb-0">Copyright 2024 © Riho theme by pixelstrap  </p>
+                        <p class="mb-0">Copyright 2025 © Riho theme by pixelstrap  </p>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 </div>
-<script src="{{asset('/assets/js/jquery.min.js')}}"></script>
-<script src="{{asset('/assets/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('/assets/js/sidebar-menu.js}')}}"></script>
-<script src="{{asset('/assets/js/sidebar-pin.js')}}"></script>
-<script src="{{asset('/assets/js/feather.min.js')}}"></script>
-<script src="{{asset('/assets/js/feather-icon.js')}}"></script>
-<script src="{{asset('/assets/js/scrollbar/simplebar.js')}}"></script>
-<script src="{{asset('/assets/js/scrollbar/custom.js')}}"></script>
-<script src="{{asset('/assets/js/config.js')}}"></script>
-<script src="{{asset('/assets/js/apex/stock-prices.js')}}"></script>
-<script src="{{asset('/assets/js/apex/apex-chart.js')}}"></script>
-<script src="{{asset('/assets/js/apex/moment.min.js')}}"></script>
-<script src="{{asset('/assets/js/dashboard_3.js')}}"></script>
-<script src="{{asset('/assets/js/script.js')}}"></script>
-</body>
-@vite(['resources/js/app.js',])
-</html>
+@endsection
