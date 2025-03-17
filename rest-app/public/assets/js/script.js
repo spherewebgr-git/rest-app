@@ -39,10 +39,10 @@
 
     jQuery(".show-hide span").click(function () {
         if (jQuery(this).hasClass("show")) {
-            jQuery('input[name="login[password]"]').attr("type", "text");
+            jQuery('input[name="password"]').attr("type", "text");
             jQuery(this).removeClass("show");
         } else {
-            jQuery('input[name="login[password]"]').attr("type", "password");
+            jQuery('input[name="password"]').attr("type", "password");
             jQuery(this).addClass("show");
         }
     });
@@ -353,15 +353,15 @@
         jQuery(".flip-card-inner").removeClass("flipped");
     });
     // ================== show and hide input start
-    const toggle = document.getElementById("searchIcon")
-    let newinput = false
-    toggle.addEventListener("click", function(){
-        newinput = !newinput
-        if(newinput){
-            document.getElementById("searchInput").classList.add("show")
-        }else{
-            document.getElementById("searchInput").classList.remove("show")
-        }
-    });
+    // const toggle = document.getElementById("searchIcon")
+    // let newinput = false
+    // toggle.addEventListener("click", function(){
+    //     newinput = !newinput
+    //     if(newinput){
+    //         document.getElementById("searchInput").classList.add("show")
+    //     }else{
+    //         document.getElementById("searchInput").classList.remove("show")
+    //     }
+    // });
     // ================ show and hide input css end
 
