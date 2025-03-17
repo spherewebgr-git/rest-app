@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'John Smith',
             'email' => 'john@resty.com',
             'user_type' => 'manager',
-            'password' => Str::substr(Str::slug(Hash::make('john1234!')), 0, 32),
+            'password' => Hash::make('john1234!'),
             'email_verified_at' => now(),
             'remember_token' => Str::random(10)
 
@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Katy Miller',
             'email' => 'katy@resty.com',
             'user_type' => 'staff',
-            'password' => Str::substr(Str::slug(Hash::make('katy1234!')), 0, 32),
+            'password' => Hash::make('katy1234!'),
             'email_verified_at' => now(),
             'remember_token' => Str::random(10)
         ]);
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Roger Pitt',
                 'email' => 'roger@resty.com',
                 'user_type' => 'kitchen_staff',
-                'password' => Str::substr(Str::slug(Hash::make('roger1234!')), 0, 32),
+                'password' => Hash::make('roger1234!'),
                 'email_verified_at' => now(),
                 'remember_token' => Str::random(10)
             ]);
@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'George Black',
                 'email' => 'george@resty.com',
                 'user_type' => 'inventory_staff',
-                'password' => Str::substr(Str::slug(Hash::make('george1234!')), 0, 32),
+                'password' => Hash::make('george1234!'),
                 'email_verified_at' => now(),
                 'remember_token' => Str::random(10)
             ]);
