@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{asset('assets/website/css/owl.theme.default.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('assets/website/css/custom.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('assets/website/css/responsive.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/css/toastr.min.css')}}" type="text/css">
 </head>
 
 <body>
@@ -46,8 +47,6 @@
 <script src="{{asset('/assets/website/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('/assets/website/js/owl.carousel.js')}}"></script>
 <script src="{{asset('/assets/website/js/contact-form.js')}}"></script>
-<script src="{{asset('/assets/website/js/video-popup.js')}}"></script>
-<script src="{{asset('/assets/website/js/video-section.js')}}"></script>
 <script src="{{asset('/assets/website/js/jquery.validate.js')}}"></script>
 <script src="{{asset('/assets/website/js/wow.js')}}"></script>
 <script src="{{asset('/assets/website/js/counter.js')}}"></script>
@@ -56,6 +55,12 @@
 <script src="{{asset('/assets/website/js/jquery.easing-1.3.js')}}"></script>
 <script src="{{asset('/assets/website/js/custom.js')}}"></script>
 <script src="{{asset('/assets/website/js/search.js')}}"></script>
+<script src="{{asset('/assets/js/toastr/toastr.min.js')}}"></script>
+<script>
+    @if (Session::has('message'))
+        toastr.success("{{Session::get('message')}}")
+    @endif
 
+</script>
 </body>
 </html>

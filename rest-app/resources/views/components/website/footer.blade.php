@@ -63,7 +63,7 @@
         </div>
         <hr>
         <div class="float-left w-100 copyright-con d-flex align-items-center main-box">
-            <p class="mb-0">Copyright 2025, Foodzey. All Rights Reserved.</p>
+            <p class="mb-0">Copyright 2025, Resty. All Rights Reserved.</p>
             <div class="social-icons-con d-flex">
                 <span class="d-inline-block follow-us">Follow Us:</span>
                 <ul class="list-unstyled p-0 d-flex align-items-center mb-0">
