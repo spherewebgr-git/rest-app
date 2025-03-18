@@ -148,13 +148,12 @@
                     <div class="media profile-media"><img class="b-r-10" src="{{asset('/assets/images/user/'.Auth::user()->user_type.'.png')}}" alt="Staff Icon">
                         <div class="media-body d-xxl-block d-none box-col-none">
                             <div class="d-flex align-items-center gap-2"> <span>{{Auth::user()->name}} </span><i class="middle fa fa-angle-down"> </i></div>
-                            <p class="mb-0 font-roboto" style="text-transform: capitalize">{{Auth::user()->user_type}}</p>
+                            <p class="mb-0 font-roboto" style="text-transform: capitalize">{{str_replace("_", " ", Auth::user()->user_type)}}</p>
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
                         <li><a href="user-profile.html"><i data-feather="user"></i><span>My Profile</span></a></li>
                         <li><a href="letter-box.html"><i data-feather="mail"></i><span>Inbox</span></a></li>
-                        <li> <a href="edit-profile.html"> <i data-feather="settings"></i><span>Settings</span></a></li>
                         <li><a class="btn btn-pill btn-outline-primary btn-sm" href="/logout">Log Out</a></li>
                     </ul>
                 </li>

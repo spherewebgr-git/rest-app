@@ -16,7 +16,7 @@ class UsersController extends Controller
                 return view('dashboards.manager');
                 break;
             case 'staff':
-                $reservation_requests = ReservationRequest::offset(0)->limit(4)->get();
+                $reservation_requests = ReservationRequest::offset(0)->limit(4)->orderBy('reservation_date')->get();
                 $reservationsCount = ReservationRequest::all()->count();
                 return view('dashboards.staff', ['reservation_requests' => $reservation_requests, 'counted' => $reservationsCount]);
                 break;
