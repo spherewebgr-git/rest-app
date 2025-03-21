@@ -44,21 +44,6 @@
                         <span>Dashboard Home</span>
                     </a>
                 </li>
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                        <svg class="stroke-icon">
-                            <use href="../assets/svg/icon-sprite.svg#stroke-layout"></use>
-                        </svg>
-                        <svg class="fill-icon">
-                            <use href="../assets/svg/icon-sprite.svg#fill-layout"></use>
-                        </svg>
-                        <span class="lan-7">Page layout</span></a>
-                    <ul class="sidebar-submenu">
-                        <li><a href="box-layout.html">Boxed</a></li>
-                        <li><a href="layout-rtl.html">RTL</a></li>
-                        <li><a href="layout-dark.html">Dark Layout</a></li>
-                        <li><a href="hide-on-scroll.html">Hide Nav Scroll</a></li>
-                    </ul>
-                </li>
                 <li class="sidebar-main-title">
                     <div>
                         <h6> <span style="text-transform: capitalize">{{str_replace("_", " ", Auth::user()->user_type)}} Menu</span></h6>

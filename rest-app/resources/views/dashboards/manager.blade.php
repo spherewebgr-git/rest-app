@@ -496,16 +496,7 @@
             </div>
             <!-- Container-fluid Ends-->
         </div>
-        <!-- footer start-->
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 footer-copyright text-center">
-                        <p class="mb-0">Copyright 2025 © Riho theme by pixelstrap  </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('components.dashboards.dashboard-footer')
     </div>
 </div>
 @endsection

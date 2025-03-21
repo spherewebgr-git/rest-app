@@ -468,7 +468,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-5 col-xl-6 box-col-6">
+                        <div id="reservationRequestsBox" class="col-xxl-5 col-xl-6 box-col-6">
                             @include('components.dashboards.dashboard-reservations-requests')
                         </div>
                         <div class="col-xxl-3 col-xl-6 box-col-6">
@@ -495,16 +495,7 @@
                 </div>
                 <!-- Container-fluid Ends-->
             </div>
-            <!-- footer start-->
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12 footer-copyright text-center">
-                            <p class="mb-0">Copyright 2025 © Riho theme by pixelstrap  </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            @include('components.dashboards.dashboard-footer')
         </div>
     </div>
 @endsection
