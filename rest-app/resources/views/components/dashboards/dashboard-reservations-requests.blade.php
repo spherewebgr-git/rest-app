@@ -2,6 +2,7 @@
     <div class="card-header card-no-border total-revenue">
         <h4>Latest Reservation Requests</h4><a href="#!">View all and reserve</a>
     </div>
+    @if($reservation_requests )
     <div class="card-body pt-0">
         <div class="table-order table-responsive custom-scrollbar">
             <table class=" w-100 tranaction-table">
@@ -30,4 +31,5 @@
             </table>
         </div>
     </div>
+        @endif
 </div>
