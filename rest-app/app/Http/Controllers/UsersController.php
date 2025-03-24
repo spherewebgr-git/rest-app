@@ -11,7 +11,7 @@ class UsersController extends Controller
     public function dashboard()
     {
         $userType = Auth::user()->user_type;
-        dd(Auth::user());
+
         $reservation_requests = ReservationRequest::offset(0)->limit(4)->orderBy('reservation_date')->get();
         $reservationsCount = ReservationRequest::all()->count();
         switch ($userType) {

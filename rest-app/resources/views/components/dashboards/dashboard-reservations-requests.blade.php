@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header card-no-border total-revenue">
-        <h4>Latest Reservation Requests</h4><a href="#!">View all and reserve</a>
+        <h4>Latest Reservation Requests</h4><a href="{{route('requests')}}">View all and reserve</a>
     </div>
     @if($reservation_requests )
     <div class="card-body pt-0">

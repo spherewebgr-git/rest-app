@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PersonnelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -9,6 +10,8 @@ Route::get('/', function () {
 });
 
 Route::get('/app-dashboard', [UsersController::class, 'dashboard'])->middleware('auth')->name('dashboard');
+Route::get('/reservation_requests', [PersonnelController::class, 'requests'])->middleware('auth')->name('requests');
+Route::get('/decline_reservation/{id}', [PersonnelController::class, 'decline'])->middleware('auth')->name('decline');
 
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
